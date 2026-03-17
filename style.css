@@ -1,0 +1,296 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background: #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  border-bottom: 1px solid #eee;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.logo {
+  height: 36px;
+}
+
+nav {
+  display: flex;
+  gap: 24px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #1a8754;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 24px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s;
+}
+
+.btn-green {
+  background-color: #1a8754;
+  color: #fff;
+}
+
+.btn-green:hover {
+  background-color: #15713f;
+}
+
+.btn-red {
+  display: block;
+  background-color: #dc3545;
+  color: #fff;
+  padding: 12px 24px;
+}
+
+.btn-red:hover {
+  background-color: #c82333;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+  padding: 0 24px;
+  max-width: 1000px;
+  margin: 32px auto 24px;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  gap: 36px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.sidebar {
+  flex: 0 0 230px;
+  position: sticky;
+  top: 24px;
+  align-self: flex-start;
+}
+
+.toc h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.toc ul {
+  list-style: none;
+  margin-bottom: 28px;
+}
+
+.toc li {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.toc a {
+  color: #777;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.toc a:hover {
+  color: #333;
+}
+
+.toc a.active {
+  background: linear-gradient(to left, #c0392b, #e8734a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+
+.next-steps {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.next-steps h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.next-steps ol {
+  padding-left: 20px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.next-steps li {
+  margin-bottom: 6px;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+}
+
+.content section {
+  margin-bottom: 36px;
+  overflow: hidden;
+}
+
+.content h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 16px;
+}
+
+.content p {
+  margin-bottom: 12px;
+  font-size: 15px;
+  max-width: 65ch;
+  line-height: 1.75;
+}
+
+.content ul {
+  padding-left: 24px;
+  margin-bottom: 16px;
+}
+
+.content li {
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.hero-img {
+  float: right;
+  width: 220px;
+  height: auto;
+  border-radius: 8px;
+  margin: 0 0 16px 24px;
+}
+
+.centre-card {
+  margin-bottom: 28px;
+}
+
+.centre-img {
+  width: 200px;
+  height: 110px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.centre-img--macquarie {
+  background-color: #c0392b;
+}
+
+.centre-img--boxhill {
+  background-color: #1a3c6e;
+}
+
+.centre-card h4 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.centre-card h4 a {
+  color: #333;
+  text-decoration: underline;
+}
+
+.centre-card h4 a:hover {
+  color: #1a8754;
+}
+
+.hrec-note {
+  text-align: center;
+  font-style: italic;
+  margin-top: 28px;
+  color: #555;
+}
+
+.map-container {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    flex: none;
+    position: static;
+    width: 100%;
+  }
+
+  .hero-img {
+    float: none;
+    width: 100%;
+    margin: 0 0 16px 0;
+  }
+
+  .centre-img {
+    width: 100%;
+  }
+}
