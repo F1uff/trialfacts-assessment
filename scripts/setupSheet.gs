@@ -22,14 +22,10 @@ function setupSheet() {
 function addStatusColumn_(sheet) {
   sheet.getRange('H1').setValue('Status').setFontWeight('bold');
 
-  // Boolean math: + = OR, * = AND
   // Pass: Q1 is Yes/Unsure AND (Q2 is No OR (Q2 is Yes/Unsure AND Q3 is Yes/Unsure))
   const formula =
-    '=ARRAYFORMULA(IF(A2:A="","",IF(' +
-    '((E2:E="Yes")+(E2:E="Unsure"))' +
-    '*' +
-    '((F2:F="No")+((F2:F="Yes")+(F2:F="Unsure"))*((G2:G="Yes")+(G2:G="Unsure")))' +
-    ',"Passed","Failed")))';
+    '=IF(A2="","",IF(OR(E2="Yes",E2="Unsure"),IF(F2="No","Passed",' +
+    'IF(OR(G2="Yes",G2="Unsure"),"Passed","Failed")),"Failed"))';
 
   sheet.getRange('H2').setFormula(formula);
 }
