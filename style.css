@@ -85,19 +85,19 @@ nav a:hover {
 }
 
 h1 {
-  font-size: 28px;
+  font-size: 36px;
   font-weight: 700;
   color: #222;
   padding: 0 24px;
-  max-width: 1000px;
-  margin: 32px auto 24px;
+  max-width: 1140px;
+  margin: 32px auto 40px;
 }
 
 .container {
   display: flex;
   align-items: flex-start;
   gap: 36px;
-  max-width: 1000px;
+  max-width: 1140px;
   margin: 0 auto;
   padding: 24px;
 }
@@ -110,7 +110,7 @@ h1 {
 }
 
 .toc h3 {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
   margin-bottom: 12px;
 }
@@ -271,7 +271,7 @@ h1 {
   }
 
   h1 {
-    font-size: 22px;
+    font-size: 26px;
   }
 
   .container {
