@@ -228,17 +228,17 @@ h1 {
   background-color: #1a3c6e;
 }
 
-.centre-card h4 {
+.centre-card h3 {
   font-size: 16px;
   margin-bottom: 8px;
 }
 
-.centre-card h4 a {
+.centre-card h3 a {
   color: #333;
   text-decoration: underline;
 }
 
-.centre-card h4 a:hover {
+.centre-card h3 a:hover {
   color: #1a8754;
 }
 
